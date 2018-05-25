@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Piranha;
+using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.ImageSharp;
 using Piranha.Local;
 
@@ -23,19 +24,10 @@ namespace BasicWeb
             {
                 config.ModelBinderProviders.Insert(0, new Piranha.Manager.Binders.AbstractModelBinderProvider());
             });
-            services.AddDbContext<Db>(options =>
-                options.UseSqlite("Filename=./piranha.db"));            
-            services.AddSingleton<IStorage, FileStorage>();
-            services.AddSingleton<IImageProcessor, ImageSharpProcessor>();
-            services.AddScoped<IDb, Db>();
-            services.AddScoped<IApi, Api>();
-            services.AddPiranhaSimpleSecurity(
-                new Piranha.AspNetCore.SimpleUser(Piranha.Manager.Permission.All()) 
-                {
-                    UserName = "admin",
-                    Password = "password"
-                }
-            );
+            services.AddPiranhaFileStorage();
+            services.AddPiranhaImageSharp();
+            services.AddPiranhaEF(options => options.UseSqlite("Filename=./piranha.db"));
+            services.AddPiranhaIdentityWithSeed<IdentitySQLiteDb>(options => options.UseSqlite("Filename=./piranha.db"));
             services.AddPiranhaManager();
 
             return services.BuildServiceProvider();
@@ -67,7 +59,7 @@ namespace BasicWeb
 
             // Register middleware
             app.UseStaticFiles();
-            app.UsePiranhaSimpleSecurity();
+            app.UseAuthentication();
             app.UsePiranha();
             app.UsePiranhaManager();
             app.UseMvc(routes => 

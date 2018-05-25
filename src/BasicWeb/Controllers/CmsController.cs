@@ -24,9 +24,19 @@ namespace BasicWeb.Controllers
         /// <param name="month">The optional month</param>
         /// <param name="page">The optional page</param>
         /// <param name="category">The optional category</param>
+        /// <param name="tag">The optional tag</param>
         [Route("archive")]
-        public IActionResult Archive(Guid id, int? year = null, int? month = null, int? page = null, Guid? category = null) {
-            var model = api.Archives.GetById<Models.BlogArchive>(id, page, category, year, month);
+        public IActionResult Archive(Guid id, int? year = null, int? month = null, int? page = null, 
+            Guid? category = null, Guid? tag = null) 
+        {
+            Models.BlogArchive model;
+
+            if (category.HasValue)
+                model = api.Archives.GetByCategoryId<Models.BlogArchive>(id, category.Value, page, year, month);
+            else if (tag.HasValue)
+                model = api.Archives.GetByTagId<Models.BlogArchive>(id, tag.Value, page, year, month);
+            else model = api.Archives.GetById<Models.BlogArchive>(id, page, year, month);
+            
             ViewBag.CurrentPage = model.Id;
 
             return View(model);
