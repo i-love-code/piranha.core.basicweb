@@ -6,9 +6,10 @@
 <div class="main">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-8 page-body">
+            <div class="col-sm-10 page-body">
                 <h1>@Model.Title</h1>
-                @Html.Raw(Model.Body)
+
+                @DisplayFor(m => m.Blocks)
             </div>
         </div>
     </div>

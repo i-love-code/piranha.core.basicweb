@@ -8,12 +8,6 @@ namespace BasicWeb.Models
     public class BlogPost  : Post<BlogPost>
     {
         /// <summary>
-        /// Gets/sets the main body.
-        /// </summary>
-        [Region(Title = "Main content")]
-        public HtmlField Body { get; set; }
-
-        /// <summary>
         /// Gets/sets the post heading.
         /// </summary>
         [Region]

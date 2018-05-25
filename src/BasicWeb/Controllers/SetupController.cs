@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Piranha;
+using Piranha.Extend.Blocks;
 using System;
 
 namespace BasicWeb.Controllers
@@ -62,9 +63,11 @@ namespace BasicWeb.Controllers
             post.Title = "Dapibus Cursus Justo";
             post.MetaKeywords = "Nullam, Mollis, Cras, Sem, Ipsum";
             post.MetaDescription = "Aenean lacinia bibendum nulla sed consectetur.";
-            post.Body = "<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>";
             post.Heading.PrimaryImage = bannerId;
             post.Heading.Ingress = "Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.";
+            post.Blocks.Add(new HtmlBlock {
+                Body = "<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>"
+            });
             post.Published = DateTime.Now;
 
             api.Posts.Save(post);                  
@@ -78,7 +81,9 @@ namespace BasicWeb.Controllers
             startPage.NavigationTitle = "Home";
             startPage.Heading.PrimaryImage = bannerId;
             startPage.Heading.Ingress = "Aenean lacinia bibendum nulla sed consectetur.";
-            startPage.Body = "<p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p><p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>";
+            startPage.Blocks.Add(new HtmlBlock {
+                Body = "<p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p><p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
+            });
             startPage.Published = DateTime.Now;
 
             // Add teasers

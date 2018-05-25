@@ -10,12 +10,6 @@ namespace BasicWeb.Models
     public class StartPage : Page<StartPage>
     {
         /// <summary>
-        /// Gets/sets the main body.
-        /// </summary>
-        [Region(Title = "Main content")]
-        public HtmlField Body { get; set; }
-
-        /// <summary>
         /// Gets/sets the page heading.
         /// </summary>
         [Region]

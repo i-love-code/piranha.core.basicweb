@@ -7,7 +7,7 @@
 <div class="main">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-8 post-header">
+            <div class="col-sm-10 post-header">
                 <h1>@Model.Title</h1>
                 @if (Model.Tags.Count > 0) {
                     foreach (var tag in Model.Tags) {
@@ -24,8 +24,8 @@
             </div>
         }
         <div class="row justify-content-center">
-            <div class="col-sm-8 post-body">
-                @Html.Raw(Model.Body)
+            <div class="col-sm-10 post-body">
+                @Html.DisplayFor(m => m.Blocks)
             </div>
         </div>
     </div>
