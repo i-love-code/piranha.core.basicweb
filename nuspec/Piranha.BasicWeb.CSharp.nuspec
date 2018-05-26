@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>Piranha.BasicWeb.CSharp</id>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
     <title>Piranha CMS Basic Web Template</title>
     <authors>Håkan Edling</authors>
     <owners>Håkan Edling</owners>
@@ -41,6 +41,10 @@
     <file src="..\src\BasicWeb\Views\Cms\Page.cshtml" target="content\Views\Cms\Page.cshtml" />
     <file src="..\src\BasicWeb\Views\Cms\Post.cshtml" target="content\Views\Cms\Post.cshtml" />
     <file src="..\src\BasicWeb\Views\Cms\Start.cshtml" target="content\Views\Cms\Start.cshtml" />
+    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\HtmlBlock.cshtml" target="content\Views\Cms\DisplayTemplates\HtmlBlock.cshtml" />
+    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\HtmlColumnBlock.cshtml" target="content\Views\Cms\DisplayTemplates\HtmlColumnBlock.cshtml" />
+    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\ImageBlock.cshtml" target="content\Views\Cms\DisplayTemplates\ImageBlock.cshtml" />
+    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\QuoteBlock.cshtml" target="content\Views\Cms\DisplayTemplates\QuoteBlock.cshtml" />
     <file src="..\src\BasicWeb\Views\Setup\Index.cshtml" target="content\Views\Setup\Index.cshtml" />
     <file src="..\src\BasicWeb\Views\Shared\Partial\_Menu.cshtml" target="content\Views\Shared\Partial\_Menu.cshtml" />
     <file src="..\src\BasicWeb\Views\Shared\Partial\_Meta.cshtml" target="content\Views\Shared\Partial\_Meta.cshtml" />
