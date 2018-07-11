@@ -36,8 +36,6 @@ namespace BasicWeb.Controllers
             else if (tag.HasValue)
                 model = api.Archives.GetByTagId<Models.BlogArchive>(id, tag.Value, page, year, month);
             else model = api.Archives.GetById<Models.BlogArchive>(id, page, year, month);
-            
-            ViewBag.CurrentPage = model.Id;
 
             return View(model);
         }
@@ -49,7 +47,6 @@ namespace BasicWeb.Controllers
         [Route("page")]
         public IActionResult Page(Guid id) {
             var model = api.Pages.GetById<Models.StandardPage>(id);
-            ViewBag.CurrentPage = model.Id;
 
             return View(model);
         }
@@ -61,7 +58,6 @@ namespace BasicWeb.Controllers
         [Route("post")]
         public IActionResult Post(Guid id) {
             var model = api.Posts.GetById<Models.BlogPost>(id);
-            ViewBag.CurrentPage = model.BlogId;
 
             return View(model);
         }
@@ -73,7 +69,6 @@ namespace BasicWeb.Controllers
         [Route("start")]
         public IActionResult Start(Guid id) {
             var model = api.Pages.GetById<Models.StartPage>(id);
-            ViewBag.CurrentPage = model.Id;
 
             return View(model);
         }

@@ -24,11 +24,13 @@ namespace BasicWeb
             {
                 config.ModelBinderProviders.Insert(0, new Piranha.Manager.Binders.AbstractModelBinderProvider());
             });
+            services.AddPiranhaApplication();
             services.AddPiranhaFileStorage();
             services.AddPiranhaImageSharp();
             services.AddPiranhaEF(options => options.UseSqlite("Filename=./piranha.db"));
             services.AddPiranhaIdentityWithSeed<IdentitySQLiteDb>(options => options.UseSqlite("Filename=./piranha.db"));
             services.AddPiranhaManager();
+            services.AddSingleton<ICache, Piranha.Cache.MemCache>();
 
             return services.BuildServiceProvider();
         }
@@ -44,6 +46,9 @@ namespace BasicWeb
             // Initialize Piranha
             var api = services.GetService<IApi>();
             App.Init(api);
+
+            // Configure cache level
+            App.CacheLevel = Piranha.Cache.CacheLevel.None;
 
             // Build content types
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)

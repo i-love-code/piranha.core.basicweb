@@ -1,6 +1,5 @@
-@inject Piranha.IApi Api
 @{
-    var sitemap = Api.Sites.GetSitemap();
+    var sitemap = WebApp.Site.Sitemap;
 }
 
 @*Not the best solution but meanwhile... class = d-sm-block d-md-none is hiding on md screen solution*@
@@ -13,7 +12,7 @@
         <div class="navbar-nav">
             @foreach (var item in sitemap)
             {
-                <a class="nav-item nav-link @(item.Id == ViewBag.CurrentPage ? "active" : "")" href="@item.Permalink"><span>@item.MenuTitle</span></a>
+                <a class="nav-item nav-link @(item.Id == WebApp.PageId ? "active" : "")" href="@item.Permalink"><span>@item.MenuTitle</span></a>
             }
         </div>
     </div>
@@ -23,7 +22,7 @@
     <ul class="nav nav-site justify-content-center">
         @foreach (var item in sitemap)
         {
-            <li class="nav-item @(item.Id == ViewBag.CurrentPage ? "active" : "")">
+            <li class="nav-item @(item.Id == WebApp.PageId ? "active" : "")">
                 <a class="nav-link" href="@item.Permalink"><span>@item.MenuTitle</span></a>
             </li>
         }

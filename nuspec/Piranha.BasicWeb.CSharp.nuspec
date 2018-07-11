@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>Piranha.BasicWeb.CSharp</id>
-    <version>5.0.1</version>
+    <version>5.1.0</version>
     <title>Piranha CMS Basic Web Template</title>
     <authors>Håkan Edling</authors>
     <owners>Håkan Edling</owners>
@@ -24,34 +24,15 @@
   <files>
     <file src="content\wwwroot\_._" target="content\wwwroot\_._" />
     <file src="..\src\BasicWeb\.template.config\template.json" target="content\.template.config\template.json" />
-    <file src="..\src\BasicWeb\assets\scss\base.scss" target="content\assets\scss\base.scss" />
-    <file src="..\src\BasicWeb\assets\scss\colors.scss" target="content\assets\scss\colors.scss" />
-    <file src="..\src\BasicWeb\assets\scss\style.scss" target="content\assets\scss\style.scss" />
-    <file src="..\src\BasicWeb\assets\scss\theme.scss" target="content\assets\scss\theme.scss" />
-    <file src="..\src\BasicWeb\Controllers\CmsController.cs" target="content\Controllers\CmsController.cs" />
-    <file src="..\src\BasicWeb\Controllers\SetupController.cs" target="content\Controllers\SetupController.cs" />
-    <file src="..\src\BasicWeb\Models\Regions\Heading.cs" target="content\Models\Regions\Heading.cs" />
-    <file src="..\src\BasicWeb\Models\Regions\Teaser.cs" target="content\Models\Regions\Teaser.cs" />
-    <file src="..\src\BasicWeb\Models\BlogArchive.cs" target="content\Models\BlogArchive.cs" />
-    <file src="..\src\BasicWeb\Models\BlogPost.cs" target="content\Models\BlogPost.cs" />
-    <file src="..\src\BasicWeb\Models\StandardPage.cs" target="content\Models\StandardPage.cs" />
-    <file src="..\src\BasicWeb\Models\StartPage.cs" target="content\Models\StartPage.cs" />
-    <file src="..\src\BasicWeb\seed\pexels-photo-355423.jpeg" target="content\seed\pexels-photo-355423.jpeg" />
-    <file src="..\src\BasicWeb\Views\Cms\Archive.cshtml" target="content\Views\Cms\Archive.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\Page.cshtml" target="content\Views\Cms\Page.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\Post.cshtml" target="content\Views\Cms\Post.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\Start.cshtml" target="content\Views\Cms\Start.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\HtmlBlock.cshtml" target="content\Views\Cms\DisplayTemplates\HtmlBlock.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\HtmlColumnBlock.cshtml" target="content\Views\Cms\DisplayTemplates\HtmlColumnBlock.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\ImageBlock.cshtml" target="content\Views\Cms\DisplayTemplates\ImageBlock.cshtml" />
-    <file src="..\src\BasicWeb\Views\Cms\DisplayTemplates\QuoteBlock.cshtml" target="content\Views\Cms\DisplayTemplates\QuoteBlock.cshtml" />
-    <file src="..\src\BasicWeb\Views\Setup\Index.cshtml" target="content\Views\Setup\Index.cshtml" />
-    <file src="..\src\BasicWeb\Views\Shared\Partial\_Menu.cshtml" target="content\Views\Shared\Partial\_Menu.cshtml" />
-    <file src="..\src\BasicWeb\Views\Shared\Partial\_Meta.cshtml" target="content\Views\Shared\Partial\_Meta.cshtml" />
-    <file src="..\src\BasicWeb\Views\Shared\_Layout.cshtml" target="content\Views\Shared\_Layout.cshtml" />
-    <file src="..\src\BasicWeb\Views\_ViewStart.cshtml" target="content\Views\_ViewStart.cshtml" />
-    <file src="..\src\BasicWeb\wwwroot\css\style.css" target="content\wwwroot\css\style.css" />
-    <file src="..\src\BasicWeb\wwwroot\css\style.min.css" target="content\wwwroot\css\style.min.css" />
+    <file src="..\src\BasicWeb\assets\scss\*.*" target="content\assets\scss" />
+    <file src="..\src\BasicWeb\Controllers\*.*" target="content\Controllers" />
+    <file src="..\src\BasicWeb\Models\*\*.*" target="content\Models" />
+    <file src="..\src\BasicWeb\seed\*.*" target="content\seed" />
+    <file src="..\src\BasicWeb\Views\Cms\*\*.*" target="content\Views" />
+    <file src="..\src\BasicWeb\Views\Setup\*.*" target="content\Views\Setup" />
+    <file src="..\src\BasicWeb\Views\Shared\*\*.*" target="content\Views\Shared" />
+    <file src="..\src\BasicWeb\Views\*.*" target="content\Views" />
+    <file src="..\src\BasicWeb\wwwroot\css\*.*" target="content\wwwroot\css" />
     <file src="..\src\BasicWeb\BasicWeb.csproj" target="content\BasicWeb.csproj" />
     <file src="..\src\BasicWeb\compilerconfig.json" target="content\compilerconfig.json" />
     <file src="..\src\BasicWeb\compilerconfig.json.defaults" target="content\compilerconfig.json.defaults" />
