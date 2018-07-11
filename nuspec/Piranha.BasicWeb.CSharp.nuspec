@@ -26,11 +26,11 @@
     <file src="..\src\BasicWeb\.template.config\template.json" target="content\.template.config\template.json" />
     <file src="..\src\BasicWeb\assets\scss\*.*" target="content\assets\scss" />
     <file src="..\src\BasicWeb\Controllers\*.*" target="content\Controllers" />
-    <file src="..\src\BasicWeb\Models\*\*.*" target="content\Models" />
+    <file src="..\src\BasicWeb\Models\**\*.*" target="content\Models" />
     <file src="..\src\BasicWeb\seed\*.*" target="content\seed" />
-    <file src="..\src\BasicWeb\Views\Cms\*\*.*" target="content\Views" />
+    <file src="..\src\BasicWeb\Views\Cms\**\*.*" target="content\Views\Cms" />
     <file src="..\src\BasicWeb\Views\Setup\*.*" target="content\Views\Setup" />
-    <file src="..\src\BasicWeb\Views\Shared\*\*.*" target="content\Views\Shared" />
+    <file src="..\src\BasicWeb\Views\Shared\**\*.*" target="content\Views\Shared" />
     <file src="..\src\BasicWeb\Views\*.*" target="content\Views" />
     <file src="..\src\BasicWeb\wwwroot\css\*.*" target="content\wwwroot\css" />
     <file src="..\src\BasicWeb\BasicWeb.csproj" target="content\BasicWeb.csproj" />
