@@ -5,7 +5,7 @@ using Piranha.Models;
 namespace BasicWeb.Models
 {
     [PageType(Title = "Blog archive", UseBlocks = false)]
-    public class BlogArchive  : BlogPage<BlogArchive>
+    public class BlogArchive  : ArchivePage<BlogArchive>
     {
         /// <summary>
         /// Gets/sets the archive heading.
