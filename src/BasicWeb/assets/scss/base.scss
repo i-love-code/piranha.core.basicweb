@@ -10,23 +10,33 @@ header {
        margin: 2rem 0; 
     }
 
-    &.site-header.site-header-dark {
-        position: initial;
+    &.site-header {
+        .navbar {
+            padding: .5rem 0;
+        }
 
-        .nav-site {
-            a {
-                color: #000;
-    
-                &:hover {
-                    color: #000;
-                }
-            }
-    
-            .active {
+        &.site-header-dark {
+            position: initial;
+
+            .nav-site {
                 a {
                     color: #000;
+        
+                    &:hover {
+                        color: #000;
+                    }
                 }
-            }    
+        
+                .active {
+                    a {
+                        color: #000;
+                    }
+                }    
+            }
+
+            .navbar-toggler {
+                background: #222;
+            }
         }
     }
 
