@@ -81,6 +81,7 @@ header {
 .post-body {
     margin-top: 3rem;
 }
+
 .page-body {
     h1 {
         margin-bottom: 3rem;
@@ -92,4 +93,11 @@ blockquote {
     margin: 2rem 0;
     font-size: 1.2rem;
     border-left: solid 4px #eee;
+}
+
+p {
+    &.text {
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        font-size: 87.5%;        
+    }
 }
