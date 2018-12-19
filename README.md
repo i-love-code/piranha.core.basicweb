@@ -1,5 +1,8 @@
 # Piranha.Core BasicWeb Template
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/PiranhaCMS/piranha.core.basicweb.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PiranhaCMS/piranha.core.basicweb/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PiranhaCMS/piranha.core.basicweb.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PiranhaCMS/piranha.core.basicweb/context:javascript)
+
 | Build server | Platform     | Build status |
 |--------------|--------------|--------------|
 | AppVeyor     | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/dn4ltfl1rnlv9ksk?svg=true)](https://ci.appveyor.com/project/tidyui/piranha-core-basicweb) |
