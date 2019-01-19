@@ -1,16 +1,18 @@
 using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
+using BasicWeb.Data.Regions;
 
-namespace BasicWeb.Models
+namespace BasicWeb.Data.Pages
 {
     [PageType(Title = "Blog archive", UseBlocks = false)]
-    public class BlogArchive  : ArchivePage<BlogArchive>
+    [PageTypeRoute(Title = "Default", Route = "/blog/listing")]
+    public class BlogListingPage  : ArchivePage<BlogListingPage>
     {
         /// <summary>
         /// Gets/sets the archive heading.
         /// </summary>
         [Region]
-        public Regions.Heading Heading { get; set; }
+        public HeadingRegion Heading { get; set; }
     }
 }

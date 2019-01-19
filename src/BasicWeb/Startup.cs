@@ -11,6 +11,7 @@ using Piranha;
 using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.ImageSharp;
 using Piranha.Local;
+using BasicWeb.Data.Pages;
 
 namespace BasicWeb
 {
@@ -51,13 +52,16 @@ namespace BasicWeb
 
             // Build content types
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)
-                .AddType(typeof(Models.BlogArchive))
-                .AddType(typeof(Models.StandardPage))
-                .AddType(typeof(Models.StartPage));
+                .AddType(typeof(BlogListingPage))
+                .AddType(typeof(StandardPage))
+                .AddType(typeof(StartPage));
+
             pageTypeBuilder.Build()
                 .DeleteOrphans();
+
             var postTypeBuilder = new Piranha.AttributeBuilder.PostTypeBuilder(api)
-                .AddType(typeof(Models.BlogPost));
+                .AddType(typeof(BlogPost));
+
             postTypeBuilder.Build()
                 .DeleteOrphans();
 
@@ -66,6 +70,7 @@ namespace BasicWeb
             app.UseAuthentication();
             app.UsePiranha();
             app.UsePiranhaManager();
+            
             app.UseMvc(routes => 
             {
                 routes.MapRoute(name: "areaRoute",

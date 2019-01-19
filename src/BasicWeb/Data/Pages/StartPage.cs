@@ -2,30 +2,31 @@ using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
 using System.Collections.Generic;
+using BasicWeb.Data.Regions;
 
-namespace BasicWeb.Models
+namespace BasicWeb.Data.Pages
 {
     [PageType(Title = "Start page")]
-    [PageTypeRoute(Title = "Default", Route = "/start")]
+    [PageTypeRoute(Title = "Default", Route = "/startpage")]
     public class StartPage : Page<StartPage>
     {
         /// <summary>
         /// Gets/sets the page heading.
         /// </summary>
         [Region]
-        public Regions.Heading Heading { get; set; }
+        public HeadingRegion Heading { get; set; }
 
         /// <summary>
         /// Gets/sets the available teasers.
         /// </summary>
         [Region(ListTitle = "Title")]
-        public IList<Regions.Teaser> Teasers { get; set; }
+        public IList<TeaserRegion> Teasers { get; set; }
 
         /// <summary>
         /// Default constructor.
         /// </summary>
         public StartPage() {
-            Teasers = new List<Regions.Teaser>();
+            Teasers = new List<TeaserRegion>();
         }
     }
 }
