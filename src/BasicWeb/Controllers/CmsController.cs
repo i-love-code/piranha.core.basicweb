@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BasicWeb.Models;
+using Microsoft.AspNetCore.Mvc;
 using Piranha;
 using System;
 
@@ -29,13 +30,13 @@ namespace BasicWeb.Controllers
         public IActionResult Archive(Guid id, int? year = null, int? month = null, int? page = null, 
             Guid? category = null, Guid? tag = null) 
         {
-            Models.BlogArchive model;
+            BlogArchive model;
 
             if (category.HasValue)
-                model = api.Archives.GetByCategoryId<Models.BlogArchive>(id, category.Value, page, year, month);
+                model = api.Archives.GetByCategoryId<BlogArchive>(id, category.Value, page, year, month);
             else if (tag.HasValue)
-                model = api.Archives.GetByTagId<Models.BlogArchive>(id, tag.Value, page, year, month);
-            else model = api.Archives.GetById<Models.BlogArchive>(id, page, year, month);
+                model = api.Archives.GetByTagId<BlogArchive>(id, tag.Value, page, year, month);
+            else model = api.Archives.GetById<BlogArchive>(id, page, year, month);
 
             return View(model);
         }
@@ -46,7 +47,7 @@ namespace BasicWeb.Controllers
         /// <param name="id">The unique page id</param>
         [Route("page")]
         public IActionResult Page(Guid id) {
-            var model = api.Pages.GetById<Models.StandardPage>(id);
+            var model = api.Pages.GetById<StandardPage>(id);
 
             return View(model);
         }
@@ -57,7 +58,7 @@ namespace BasicWeb.Controllers
         /// <param name="id">The unique post id</param>
         [Route("post")]
         public IActionResult Post(Guid id) {
-            var model = api.Posts.GetById<Models.BlogPost>(id);
+            var model = api.Posts.GetById<BlogPost>(id);
 
             return View(model);
         }
@@ -68,7 +69,7 @@ namespace BasicWeb.Controllers
         /// <param name="id">The unique page id</param>
         [Route("start")]
         public IActionResult Start(Guid id) {
-            var model = api.Pages.GetById<Models.StartPage>(id);
+            var model = api.Pages.GetById<StartPage>(id);
 
             return View(model);
         }
