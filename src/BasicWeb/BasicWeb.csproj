@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -18,5 +19,9 @@
     <PackageReference Include="Piranha.ImageSharp" Version="5.4.0-rc1" />
     <PackageReference Include="Piranha.Local.FileStorage" Version="5.4.0" />
     <PackageReference Include="Piranha.Manager" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BasicWeb.Data\BasicWeb.Data.csproj" />
   </ItemGroup>
 </Project>

@@ -2,12 +2,12 @@ using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
 
-namespace BasicWeb.Models.Regions
+namespace BasicWeb.Data.Regions
 {
     /// <summary>
     /// Simple region for a teaser.
     /// </summary>
-    public class Teaser
+    public class TeaserRegion
     {
         /// <summary>
         /// Gets/sets the main title.
@@ -39,7 +39,8 @@ namespace BasicWeb.Models.Regions
         [Field]
         public HtmlField Body { get; set; }
 
-        public Teaser() {
+        public TeaserRegion()
+        {
             PageLink = new PageField();
             PostLink = new PostField();
         }

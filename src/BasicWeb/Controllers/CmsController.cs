@@ -1,4 +1,4 @@
-﻿using BasicWeb.Models;
+﻿using BasicWeb.Data.Pages;
 using Microsoft.AspNetCore.Mvc;
 using Piranha;
 using System;

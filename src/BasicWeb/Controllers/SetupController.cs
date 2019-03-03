@@ -1,5 +1,5 @@
-using BasicWeb.Models;
-using BasicWeb.Models.Regions;
+using BasicWeb.Data.Pages;
+using BasicWeb.Data.Regions;
 using Microsoft.AspNetCore.Mvc;
 using Piranha;
 using Piranha.Extend.Blocks;
@@ -89,13 +89,13 @@ namespace BasicWeb.Controllers
             startPage.Published = DateTime.Now;
 
             // Add teasers
-            startPage.Teasers.Add(new Teaser() {
+            startPage.Teasers.Add(new TeaserRegion() {
                 Title = "Lorem Consectetur",
                 SubTitle = "Ultricies Nullam Cras",
                 Body = "Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.",
                 PageLink = blogPage
             });
-            startPage.Teasers.Add(new Teaser() {
+            startPage.Teasers.Add(new TeaserRegion() {
                 Title = "Vestibulum Bibendum",
                 SubTitle = "Tortor Cras Tristique",
                 Body = "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.",

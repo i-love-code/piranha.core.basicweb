@@ -1,8 +1,8 @@
-using BasicWeb.Models.Regions;
+using BasicWeb.Data.Regions;
 using Piranha.AttributeBuilder;
 using Piranha.Models;
 
-namespace BasicWeb.Models
+namespace BasicWeb.Data.Pages
 {
     [PageType(Title = "Blog archive", UseBlocks = false)]
     public class BlogArchive  : ArchivePage<BlogArchive>
@@ -11,6 +11,6 @@ namespace BasicWeb.Models
         /// Gets/sets the archive heading.
         /// </summary>
         [Region]
-        public Heading Heading { get; set; }
+        public HeadingRegion Heading { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-using BasicWeb.Models.Regions;
+using BasicWeb.Data.Regions;
 using Piranha.AttributeBuilder;
 using Piranha.Models;
 
-namespace BasicWeb.Models
+namespace BasicWeb.Data.Pages
 {
     [PostType(Title = "Blog post")]
     public class BlogPost  : Post<BlogPost>
@@ -11,6 +11,6 @@ namespace BasicWeb.Models
         /// Gets/sets the post heading.
         /// </summary>
         [Region]
-        public Heading Heading { get; set; }
+        public HeadingRegion Heading { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BasicWeb.Data.Pages;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,13 +44,16 @@ namespace BasicWeb
 
             // Build content types
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)
-                .AddType(typeof(Models.BlogArchive))
-                .AddType(typeof(Models.StandardPage))
-                .AddType(typeof(Models.StartPage));
+                .AddType(typeof(BlogArchive))
+                .AddType(typeof(StandardPage))
+                .AddType(typeof(StartPage));
+
             pageTypeBuilder.Build()
                 .DeleteOrphans();
+
             var postTypeBuilder = new Piranha.AttributeBuilder.PostTypeBuilder(api)
-                .AddType(typeof(Models.BlogPost));
+                .AddType(typeof(BlogPost));
+
             postTypeBuilder.Build()
                 .DeleteOrphans();
 
@@ -64,8 +68,7 @@ namespace BasicWeb
                     template: "{area:exists}/{controller}/{action}/{id?}",
                     defaults: new { controller = "Home", action = "Index" });
 
-                routes.MapRoute(
-                    name: "default",
+                routes.MapRoute(name: "default",
                     template: "{controller=home}/{action=index}/{id?}");
             });
         }

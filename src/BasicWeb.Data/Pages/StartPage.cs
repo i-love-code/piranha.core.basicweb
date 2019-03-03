@@ -1,9 +1,9 @@
-using BasicWeb.Models.Regions;
+using BasicWeb.Data.Regions;
 using Piranha.AttributeBuilder;
 using Piranha.Models;
 using System.Collections.Generic;
 
-namespace BasicWeb.Models
+namespace BasicWeb.Data.Pages
 {
     [PageType(Title = "Start page")]
     [PageTypeRoute(Title = "Default", Route = "/start")]
@@ -13,19 +13,20 @@ namespace BasicWeb.Models
         /// Gets/sets the page heading.
         /// </summary>
         [Region]
-        public Heading Heading { get; set; }
+        public HeadingRegion Heading { get; set; }
 
         /// <summary>
         /// Gets/sets the available teasers.
         /// </summary>
         [Region(ListTitle = "Title")]
-        public IList<Teaser> Teasers { get; set; }
+        public IList<TeaserRegion> Teasers { get; set; }
 
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public StartPage() {
-            Teasers = new List<Teaser>();
+        public StartPage()
+        {
+            Teasers = new List<TeaserRegion>();
         }
     }
 }

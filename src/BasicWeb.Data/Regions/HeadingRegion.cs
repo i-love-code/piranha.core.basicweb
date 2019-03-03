@@ -1,9 +1,9 @@
 using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 
-namespace BasicWeb.Models.Regions
+namespace BasicWeb.Data.Regions
 {
-    public class Heading
+    public class HeadingRegion
     {
         /// <summary>
         /// Gets/sets the optional primary image.

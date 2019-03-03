@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Blocks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Piranha" Version="5.4.0" />
+    <PackageReference Include="Piranha.AttributeBuilder" Version="5.4.0" />
+  </ItemGroup>
+
+</Project>

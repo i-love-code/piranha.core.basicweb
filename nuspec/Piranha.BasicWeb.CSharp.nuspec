@@ -24,10 +24,10 @@
   <files>
     <file src="content\wwwroot\_._" target="content\wwwroot\_._" />
     <file src="..\src\BasicWeb\.template.config\template.json" target="content\.template.config\template.json" />
-    <file src="..\src\BasicWeb\assets\scss\*.*" target="content\assets\scss" />
+    <file src="..\src\BasicWeb\Assets\scss\*.*" target="content\assets\scss" />
     <file src="..\src\BasicWeb\Controllers\*.*" target="content\Controllers" />
     <file src="..\src\BasicWeb\Models\**\*.*" target="content\Models" />
-    <file src="..\src\BasicWeb\seed\*.*" target="content\seed" />
+    <file src="..\src\BasicWeb\Seed\*.*" target="content\seed" />
     <file src="..\src\BasicWeb\Views\Cms\**\*.*" target="content\Views\Cms" />
     <file src="..\src\BasicWeb\Views\Setup\*.*" target="content\Views\Setup" />
     <file src="..\src\BasicWeb\Views\Shared\**\*.*" target="content\Views\Shared" />
